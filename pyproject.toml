@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "effective-performance"
 version = "0.1.0"
-description = "Minimal extract of the Clean_HiFi_kpi evaluation workflow."
+description = "Ablation from effective performance measurement"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
