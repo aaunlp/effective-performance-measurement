@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "effective-performance"
+version = "0.1.0"
+description = "Minimal extract of the Clean_HiFi_kpi evaluation workflow."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "datasets",
+    "huggingface-hub",
+    "en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "seaborn",
+    "spacy>=3.8,<3.9",
+    "torch",
+    "transformers",
+]
+
+[project.scripts]
+ner = "effective_performance.NER:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
